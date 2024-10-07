@@ -14,7 +14,7 @@ We will focus on:
 Most thoughts will be put into the backend structure. So a groundwork will be layed
 with the handling of schema models, database and routes.
 
-##***PROGRESS***
+***PROGRESS***
 
 # FIRST PHASE
 
