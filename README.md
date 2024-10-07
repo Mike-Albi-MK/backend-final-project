@@ -1,7 +1,7 @@
-# backend-final-project
+# Backend Final Project
 An attempt of creating a full-stack application. 
 
-***TOPIC***
+## ***TOPIC***
 This project will be a platform for filmmakers on an amateur and semi-profi level. It aims at
 conecting talents over commonly shared ideas and how to realise them in an joined effort.
 
@@ -14,15 +14,15 @@ Most consideration has revolved around the backend structure at this moment. It'
 laying the groundwork for an application like this. So the handling of schema models, database
 and routes will come first before we settle for the design of the frontent.
 
-***PROGRESS***
+##***PROGRESS***
 
-## FIRST PHASE
+# FIRST PHASE
 
-BRAINSTORMING:
+## BRAINSTORMING:
     Finding an idea; defining aim and purpose of the applicaition – _DONE_ 
     Name of the application – _STILL PENDING_ 
 
-OUTLINE:
+## OUTLINE:
     Considering the scope of the project (categories or sites)
     Frontend and backend tools
     Functions
