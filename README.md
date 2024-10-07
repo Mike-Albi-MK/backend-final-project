@@ -1,5 +1,5 @@
 # Backend Final Project
-An attempt of creating a full-stack application. 
+An attempt at creating a full-stack application. 
 
 ## ***TOPIC***
 This project will be a platform for filmmakers on an amateur and semi-profi level. It aims at
@@ -19,11 +19,11 @@ and routes will come first before we settle for the design of the frontent.
 # FIRST PHASE
 
 ## BRAINSTORMING:
-    Finding an idea; defining aim and purpose of the applicaition – _DONE_ 
-    Name of the application – _STILL PENDING_ 
+    - Finding an idea; defining aim and purpose of the applicaition – _DONE_ 
+    - Name of the application – _STILL PENDING_ 
 
 ## OUTLINE:
-    Considering the scope of the project (categories or sites)
-    Frontend and backend tools
-    Functions
+    - Considering the scope of the project (categories or sites)
+    - Frontend and backend tools
+    - Functions
   
