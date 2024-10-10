@@ -30,11 +30,16 @@ const userSchema = new Schema({
             type: String,
             enum: ['user', 'admin'],
             default: 'user',
-        }
+        },
+        projectIds: [{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Project',
+        }],
     }, {
         timestamps: true,
     });
 
+    //! Encrypting password before saving
 userSchema.pre("save", async function (next) {
     if (this.isModified("password")) {
         this.password = await bcrypt.hash(this.password, 12);
@@ -49,6 +54,7 @@ userSchema.pre("findOneAndUpdate", async function (next) {
     next();
 });
 
+//! Method to compare entered password with hashed password
 userSchema.methods.isPasswordCorrect = async function (
     inputPassword,
     storedPassword) {
