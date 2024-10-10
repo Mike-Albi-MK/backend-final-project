@@ -1,7 +1,7 @@
 import createError from "http-errors";
 import jwt from "jsonwebtoken";
 
-import { createSendToken } from "../libs/jwt.js";
+import createSendToken from "../libs/jwt.js";
 import User from "../models/User.js";
 
 //! SIGNUP a new user
@@ -38,6 +38,22 @@ export const login = async (req, res, next) => {
         next(error);
     }
 };
+
+// Function to get a user by ID
+export const getUser = async (req, res, next) => {
+  try {
+      const user = await User.findById(req.params.id).select('-password'); // Exclude the password field
+
+      if (!user) {
+          throw createError(404, "User not found");
+      }
+
+      res.status(200).json(user);
+  } catch (error) {
+      next(error);
+  }
+};
+
 
 //! LOGOUT an user
 export const logout = async (req, res, next) => {

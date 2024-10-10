@@ -3,9 +3,9 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import "dotenv/config";
 
-import connectToDB from "./libs/db.js";
-import userRoutes from "./routes/usersRouter.js";
-import projectRoutes from "./routes/projectsRouter.js";
+import { connectToDB } from "./libs/db.js";
+import usersRoutes from "./routes/usersRouter.js";
+import projectsRoutes from "./routes/projectsRouter.js";
 import { globalErrorHandler, routeNotFound } from "./middleware/errorHandler.js";
 
 //! Connection to database
@@ -28,8 +28,8 @@ app.use(
   );
 
 //! Routes
-app.use("api/users", userRoutes);
-app.use("/api/projects", projectRoutes);
+app.use("/api/users", usersRoutes);
+app.use("/api/projects", projectsRoutes);
 
 //! Catch 404 for undefined routes
 app.use(routeNotFound);
