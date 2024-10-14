@@ -6,7 +6,7 @@ import "dotenv/config";
 import { connectToDB } from "./libs/db.js";
 import usersRoutes from "./routes/usersRouter.js";
 import projectsRoutes from "./routes/projectsRouter.js";
-import { globalErrorHandler, routeNotFound } from "./middleware/errorHandler.js";
+import { routeNotFound, globalErrorHandler } from "./middleware/errorHandler.js";
 
 //! Connection to database
 await connectToDB();

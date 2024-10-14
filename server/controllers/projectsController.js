@@ -121,6 +121,6 @@ export const deleteProject = async (req, res, next) => {
         await project.remove();
         res.status(200).json({ message: "Project successfully removed" });
     } catch (error) {
-        ndxt(error);
+        next(error);
     }
 };

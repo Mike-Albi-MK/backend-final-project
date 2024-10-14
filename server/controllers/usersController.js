@@ -6,12 +6,23 @@ import User from "../models/User.js";
 
 //! SIGNUP a new user
 export const signup = async (req, res, next) => {
-    try {
-        const user = await User.create(req.body);
-        createSendToken(res, 201, user);
-    } catch (error) {
-        next(error);
+  try {
+    const { username, password, email } = req.body;
+
+    // Ensure the user doesn’t already exist
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return next(createError(400, "User with this email already exists."));
     }
+
+    // Create new user
+    const newUser = await User.create({ username, password, email });
+
+    // Send a response with the new user’s data
+    res.status(201).json({ success: true, user: newUser });
+  } catch (error) {
+    next(error); // Forward error to global error handler
+  }
 };
 
 //! LOGIN a new user
