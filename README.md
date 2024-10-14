@@ -26,4 +26,40 @@ with the handling of schema models, database and routes.
     - Considering the scope of the project (categories or sites)
     - Frontend and backend tools
     - Functions
-  
+
+# SECOND PHASE
+
+## STATE OF THINGS
+    Project initialized and backend has been setup. 
+    - Users should be able to register // upload and edit own pitches
+    - Users should be able to browse pending projects
+    - role split between `admin` and `user`
+    
+### File Structure
+
+├──  BACKEND_FINAL_PROJECT
+│ ├── client
+│ | └── index.html
+| ├── server
+| ├── controllers
+| | ├── db.js
+│ │ └── jwt.js
+| ├── libs
+| | ├── authMiddleware.js
+│ │ └── errorHandler.js
+| ├── middleware
+| | ├── projectsController.js
+│ │ └── usersController.js
+| ├── models
+| | ├── Project.js
+│ │ └── User.js
+| ├── node_modules
+| ├── routes
+| | ├── projectsRouter.js
+│ │ └── usersRouter.js
+│ ├── .env  
+│ ├── .gitignore
+│ ├── main.js
+| ├── package.json  
+| ├── package-lock.json  
+└── README.md   
